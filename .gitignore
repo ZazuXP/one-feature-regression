@@ -1,0 +1,53 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.iml
+.pytest_cache/
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.tmp
+.directory
+
+# Logs
+*.log
+*.pid
+
+# Data files
+*.csv
+*.xlsx
+*.h5
+*.parquet
+*.pkl
+*.pickle
+
+# Plots and images
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+
+# Coverage reports
+.coverage
+htmlcov/
+
+# MyPy, Pytest
+.mypy_cache/
+.ruff_cache/
