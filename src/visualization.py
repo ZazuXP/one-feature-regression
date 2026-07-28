@@ -48,7 +48,8 @@ def plot_residuals_histogram(X, y, model):
     plt.tight_layout()
     plt.show()
 
-def plot_all_graphics(X, y, model, loss_history):
+# Все графики в одном окне (1, 3)
+def plot_all_graphics(X, y, model, loss_history, save=False):
 
     plt.figure(figsize=(15, 6))
 
@@ -82,4 +83,6 @@ def plot_all_graphics(X, y, model, loss_history):
     plt.grid(True, alpha=0.3)
 
     plt.tight_layout()
+    if save:
+        plt.savefig('graphics.png', dpi=300, bbox_inches='tight')
     plt.show()

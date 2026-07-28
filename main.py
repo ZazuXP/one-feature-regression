@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 from src.data_generation import generate_data
 from src.model import LinearRegressionGD
-from visualization import plot_loss_history, plot_predictions_vs_actuals, plot_residuals_histogram, plot_all_graphics
+from src.visualization import plot_loss_history, plot_predictions_vs_actuals, plot_residuals_histogram, plot_all_graphics
 
 # Генерация данных
 X, y, X_train, X_test, y_train, y_test = generate_data(
@@ -22,5 +22,5 @@ print(f'📊 MSE на тестовой выборке: {test_mse:.6f}')
 w1, w0 = model.get_params()
 print(f'📈 Выученные параметры: w1 = {w1[0]:.4f}, w0 = {w0:.4f}')
 
-# График спада MSE
-plot_all_graphics(X, y, model, loss_history)
+# Графики: спад MSE, отклонение предсказаний от реальности, гистограмма остатков
+plot_all_graphics(X, y, model, loss_history, save=True)
