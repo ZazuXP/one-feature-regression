@@ -5,7 +5,7 @@ from src.visualization import plot_loss_history, plot_predictions_vs_actuals, pl
 
 # Генерация данных
 X, y, X_train, X_test, y_train, y_test = generate_data(
-    n_samples=500, weight=2, bias=5, noise=4
+    n_samples=2500, weight=2, bias=5, noise=4
     )
 
 # Создание модели и тренировка
