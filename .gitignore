@@ -43,6 +43,7 @@ Thumbs.db
 *.jpeg
 *.svg
 *.pdf
+!graphics.png
 
 # Coverage reports
 .coverage
