@@ -1,10 +1,11 @@
 import matplotlib.pyplot as plt
 from src.data_generation import generate_data
 from src.model import LinearRegressionGD
+from visualization import plot_loss_history, plot_predictions_vs_actuals, plot_residuals_histogram, plot_all_graphics
 
 # Генерация данных
 X, y, X_train, X_test, y_train, y_test = generate_data(
-    n_samples=2500, weight=2, bias=5, noise=4
+    n_samples=500, weight=2, bias=5, noise=4
     )
 
 # Создание модели и тренировка
@@ -22,11 +23,4 @@ w1, w0 = model.get_params()
 print(f'📈 Выученные параметры: w1 = {w1[0]:.4f}, w0 = {w0:.4f}')
 
 # График спада MSE
-plt.figure(figsize=(10, 5))
-plt.plot(loss_history, c='red', label='Линия MSE')
-plt.title('Спад ошибки MSE')
-plt.xlabel('Эпоха')
-plt.ylabel('MSE')
-plt.grid(True, alpha=0.3)
-plt.legend()
-plt.show()
+plot_all_graphics(X, y, model, loss_history)
