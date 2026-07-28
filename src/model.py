@@ -14,8 +14,7 @@ class LinearRegressionGD:
     def mean_squared_error(self, y_true, y_pred):
         return np.mean((y_pred - y_true)**2)
 
-    def train_model(self, X_train, y_train, learning_rate=0.01, epochs=1000, verbose=True):
-        self.loss_history = []
+    def train_model(self, X_train, y_train, learning_rate=0.0071, epochs=1000, verbose=True):
         n = X_train.shape[0]
 
         for epoch in range(epochs):

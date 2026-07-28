@@ -1,17 +1,16 @@
-import numpy as np
 import matplotlib.pyplot as plt
 from src.data_generation import generate_data
 from src.model import LinearRegressionGD
 
 # Генерация данных
 X, y, X_train, X_test, y_train, y_test = generate_data(
-    n_samples=200, weight=2, bias=5, noise=4
+    n_samples=2500, weight=2, bias=5, noise=4
     )
 
 # Создание модели и тренировка
 model = LinearRegressionGD(n_features=1)
 loss_history = model.train_model(
-    X_train, y_train, learning_rate=0.0072, epochs=1000, verbose=True
+    X_train, y_train, learning_rate=0.0071, epochs=1000, verbose=True
     )
 
 # Вывод итоговой MSE на тестовых данных
